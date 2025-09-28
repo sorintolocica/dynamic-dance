@@ -7,10 +7,21 @@
         </div>
 
         <div class="topbar-right">
-            <a href="#" class="lang active">RO</a>
-            <span class="topbar-sep">|</span>
-            <a href="#" class="lang">EN</a>
+            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                <a
+                    class="lang {{ app()->getLocale() === $localeCode ? 'active' : '' }}"
+                    rel="alternate"
+                    hreflang="{{ $localeCode }}"
+                    href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"
+                >
+                    {{ strtoupper($localeCode) }}
+                </a>
+                @if (!$loop->last)
+                    <span class="topbar-sep">|</span>
+                @endif
+            @endforeach
         </div>
+
     </div>
 </div>
 <header class="site-header">
@@ -28,14 +39,16 @@
             </ul>
         </nav>
 
-        <div class="d-flex gap-4 align-items-center">
-        <a href="/register" class="btn-cta">Înregistrare</a>
-        <a href="/login" class="btn-cta">Autentificare</a>
-        </div>
-        <!-- buton pentru mobil -->
-        <button class="menu-toggle" aria-label="Meniu">
-            ☰
-        </button>
+            <div class="d-flex gap-4 align-items-center">
+                @guest
+                    <a href="/register" class="btn-cta">Înregistrare</a>
+                    <a href="/login" class="btn-cta">Autentificare</a>
+                @endguest
+
+                @auth
+                    <a href="{{ route('dashboard') }}" class="btn-cta">Profilul meu</a>
+                @endauth
+            </div>
         </div>
     </div>
 </header>

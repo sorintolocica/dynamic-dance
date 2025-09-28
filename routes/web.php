@@ -3,9 +3,15 @@
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group([
+    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => ['web'],
+], function () {
+
+Route::get('/', [PagesController::class, 'home']);
+
 });
 
 Route::get('/event', [PagesController::class, 'single_event']);

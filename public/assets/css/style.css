@@ -335,10 +335,8 @@ img{
 
 /* footer */
 
-/* footer */
-
 .site-footer {
-    background-color: #f2f2f2;   /* gri deschis ca în imagine */
+    background-color: #f2f2f2;
     padding: 47px 0;
 }
 
@@ -807,6 +805,7 @@ img{
 }
 
 .address_sec{
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 

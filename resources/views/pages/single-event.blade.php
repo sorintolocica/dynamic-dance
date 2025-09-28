@@ -138,41 +138,53 @@
                     <h2 class="text-center">Premii</h2>
                     <div class="awards_content">
                         <div class="awards_item">
-                            <img
-                                src="https://tournaments.samodivabg.com/Areas/TwentyFifth/images/prizes/Prize1.jpg"
-                                alt="">
+                            <a href="https://tournaments.samodivabg.com/Areas/TwentyFifth/images/prizes/Prize1.jpg"
+                               data-fancybox="awards">
+                                <img src="https://tournaments.samodivabg.com/Areas/TwentyFifth/images/prizes/Prize1.jpg" alt="">
+                            </a>
                             <h4>2000 BGN cash prizes for the best solo, duo/trio, group and formation</h4>
                         </div>
+
                         <div class="awards_item">
-                            <img
-                                src="https://tournaments.samodivabg.com/Areas/TwentyFifth/images/prizes/Prize1.jpg"
-                                alt="">
+                            <a href="https://tournaments.samodivabg.com/Areas/TwentyFifth/images/prizes/Prize1.jpg"
+                               data-fancybox="awards">
+                                <img src="https://tournaments.samodivabg.com/Areas/TwentyFifth/images/prizes/Prize1.jpg" alt="">
+                            </a>
                             <h4>2000 BGN cash prizes for the best solo, duo/trio, group and formation</h4>
                         </div>
+
                         <div class="awards_item">
-                            <img
-                                src="https://tournaments.samodivabg.com/Areas/TwentyFifth/images/prizes/Prize1.jpg"
-                                alt="">
+                            <a href="https://tournaments.samodivabg.com/Areas/TwentyFifth/images/prizes/Prize1.jpg"
+                               data-fancybox="awards">
+                                <img src="https://tournaments.samodivabg.com/Areas/TwentyFifth/images/prizes/Prize1.jpg" alt="">
+                            </a>
                             <h4>2000 BGN cash prizes for the best solo, duo/trio, group and formation</h4>
                         </div>
+
                         <div class="awards_item">
-                            <img
-                                src="https://tournaments.samodivabg.com/Areas/TwentyFifth/images/prizes/Prize1.jpg"
-                                alt="">
+                            <a href="https://tournaments.samodivabg.com/Areas/TwentyFifth/images/prizes/Prize1.jpg"
+                               data-fancybox="awards">
+                                <img src="https://tournaments.samodivabg.com/Areas/TwentyFifth/images/prizes/Prize1.jpg" alt="">
+                            </a>
                             <h4>2000 BGN cash prizes for the best solo, duo/trio, group and formation</h4>
                         </div>
+
                         <div class="awards_item">
-                            <img
-                                src="https://tournaments.samodivabg.com/Areas/TwentyFifth/images/prizes/Prize1.jpg"
-                                alt="">
+                            <a href="https://tournaments.samodivabg.com/Areas/TwentyFifth/images/prizes/Prize1.jpg"
+                               data-fancybox="awards">
+                                <img src="https://tournaments.samodivabg.com/Areas/TwentyFifth/images/prizes/Prize1.jpg" alt="">
+                            </a>
                             <h4>2000 BGN cash prizes for the best solo, duo/trio, group and formation</h4>
                         </div>
+
                         <div class="awards_item">
-                            <img
-                                src="https://tournaments.samodivabg.com/Areas/TwentyFifth/images/prizes/Prize1.jpg"
-                                alt="">
+                            <a href="https://tournaments.samodivabg.com/Areas/TwentyFifth/images/prizes/Prize1.jpg"
+                               data-fancybox="awards">
+                                <img src="https://tournaments.samodivabg.com/Areas/TwentyFifth/images/prizes/Prize1.jpg" alt="">
+                            </a>
                             <h4>2000 BGN cash prizes for the best solo, duo/trio, group and formation</h4>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -180,6 +192,15 @@
     </section>
 
     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            Fancybox.bind('[data-fancybox="awards"]', {
+                Thumbs: false,      // opțional: dezactivează thumbnails
+                Toolbar: {
+                    display: ["zoom", "close"]
+                }
+            });
+        });
+
         document.addEventListener("DOMContentLoaded", () => {
             const headers = document.querySelectorAll(".accordion-header");
 
